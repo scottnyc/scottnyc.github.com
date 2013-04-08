@@ -7,21 +7,21 @@ markdown: rdiscount
 
 # configuration required for some pages
 
-domain: blog.example.com
-title: My Blog Title
-author: Me
-email: me@example.com
+domain: sguilfoyle.com
+title: Scott Guilfoyle
+author: Scott Guilfoyle
+email: scottguilfoyle@gmail.com
 
 # configuration for ehancements, uncomment to enable
 
 # feedburner:
-#   id: feedburnerid
+#   id: guilfoyle
 
 # google_analytics:
 #   account: UA-XXXXX-X
 
 # github:
-#   username: ghusername
+#   username: scottnyc
 
 # disqus:
-#   id: disqusid
+#   id: ScottSINY
