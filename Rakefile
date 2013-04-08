@@ -19,7 +19,7 @@ end
 
 desc 'Build and deploy'
 task :deploy => :build do
-  sh 'rsync -rtzh --progress --delete _site/ s13@sguilfoyle.com:/home/s13/sguilfoyle.com/public/blog/'
+  sh 'rsync -rtzh --progress --delete _site/ s13@sguilfoyle.com:/home/s13/sguilfoyle.com/public/'
 end
 
 desc 'Check links for site already running on localhost:4000'
