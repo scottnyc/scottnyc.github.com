@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8" />
     <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
     {% if page.description %}
     <meta name="description" content="{{ page.description }}" />
     {% endif %}
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="HandheldFriendly" content="true">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Import CSS -->
     <link rel="stylesheet" media="screen" href="/stylesheets/screen.css" type="text/css" />
-    <link rel="stylesheet" media="screen" href="/stylesheets/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="/stylesheets/base.css" type="text/css" />
+
+    <!-- Hero Causel CSS -->
+    <link rel="stylesheet" href="stylesheets/jquery.heroCarousel.css">
+
+    <!-- Typekit -->
+    <script type="text/javascript" src="//use.typekit.net/eqg5bhg.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
     {% if site.feedburner %}
     <link href="http://feeds.feedburner.com/{{ site.feedburner.id }}" rel="alternate" title="{{ site.title }}" type="application/atom+xml" />
     {% endif %}
@@ -26,18 +39,157 @@
     {% endif %}
   </head>
   <body>
-    <div id="page">
-      <div id="header">
-        <a href="/"><h1>{{ site.title }}</h1></a>
-      </div>
-      <div id="body">
-        {% if page.title %}<h1>{{ page.title }}</h1>{% endif %}
-        {{ content }}
+
+  <!-- Start Header -->
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="span5">
+          <div id="logo">
+            <a href="index-2.html">Scott Guilfoyle</a>
+            <p>A portfolio template for agency</p>
+          </div>
+        </div>
+        <div class="span7">
+          <!-- Start Navigation -->
+          <nav>
+            <ul id="navigation" class="pull-right hidden-phone">
+              <li class="submenu">
+                <a class="active" href="index-2.html">Home</a>
+                <ul class="dropmenu-active">
+                  <li><a href="index-2.html" class="drop-selected">Hero Carousel</a></li>
+                  <li><a href="index-cute.html">3D Cute Slider</a></li>
+                </ul>
+              </li>
+              <li class="submenu">
+                <a href="about.html">Pages</a>
+                <ul class="dropmenu-active">
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="services.html">Services</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="404.html">Error 404</a></li>
+                  <li><a href="countdown.html">Countdown</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="portfolio.html">Portfolio</a>
+              </li>
+              <li>
+                <a href="blog.html">Blog</a>
+              </li>
+              <li>
+                <a href="contact.html">Contact</a>
+              </li>
+              <li class="last submenu">
+                <a href="shortcodes.html">Features</a>
+                <ul class="dropmenu-active">
+                  <li><a href="shortcodes.html">Shortcodes</a></li>
+                  <li><a href="icons.html">Icons</a></li>
+                  <li><a href="columns.html">Columns</a></li>
+                  <li><a href="retina.html">Retina Ready</a></li>
+                  <li><a href="responsive.html">Responsive</a></li>
+                  <li><a href="cute-slider.html">Cute Slider</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <!-- End Navigation -->
+        </div>
       </div>
     </div>
+  </header>
+  <!-- End Header -->
+
+  <!-- Start Hero Carousel -->
+  <section class="hero">
+    <div class="hero-carousel">
+      <article>
+        <img class="slider-image" src="img/slider/image1.jpg" alt="slide 1" />
+        <div class="contents">
+          <h4 class="color-text">Responsive template</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas neque diam, luctus at laoreet in, auctor ut tellus. Etiam enim lacus, ornare et tempor et, rhoncus rhoncus sem.</p>
+        </div>
+      </article>
+      <article>
+        <img class="slider-image" src="img/slider/image2.jpg" alt="slide 2" />
+        <div class="contents">
+          <h4 class="color-text">Pixel-perfect design</h4>
+          <p>Praesent rhoncus nunc vitae metus condimentum viverra. Fusce sed est orci, vel condimentum felis. Suspendisse ullamcorper vulputate sagittis. Quisque ullamcorper euismod diam.</p>
+        </div>
+      </article>
+      <article>
+        <img class="slider-image" src="img/slider/image3.jpg" alt="slide 3" />
+        <div class="contents">
+          <h4 class="color-text">For digital or creative agency</h4>
+          <p>Proin ultricies, ipsum at congue dapibus, justo augue egestas tortor, sit amet varius velit massa at nunc.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+  <!-- End Hero Carousel -->
+
+  <!-- Start Footer -->
+  <footer class="container">
+    <div class="row">
+      <div class="span12">
+        <p>© 2013 <a href="index-2.html">Scott Guilfoyle</a>. Powered by S&G Web Labs.<br>
+          <span class="theme-author"><a href="http://sguilfoyle.com/" target="_blank">Site</a> by <a href="http://sguilfoyle.com/" target="_blank">Scott Guilfoyle</a>.</span>
+        </p>
+        <!-- Start Footer Navigation -->
+        <nav class="hidden-phone">
+          <ul class="pull-right">
+            <li><a class="active" href="index-2.html">Home</a></li>
+            <li><a href="shrotcodes.html">Shortcodes</a></li>
+            <li><a href="icons.html">Icons</a></li>
+            <li><a href="retina.html">Retina Ready</a></li>
+            <li><a href="responsive.html">Responsive</a></li>
+            <li><a href="cute-slider.html">Cute Slider</a></li>
+          </ul>
+        </nav>
+        <!-- End Footer Navigation -->
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
 
   {% if site.github %}
     <a href="http://github.com/{{ site.github.username }}"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" /></a>
   {% endif %}
+
+  <!-- jQuery -->
+  <script src="../../../../ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+  <script src="javascripts/jquery.easing-1.3.js"></script>
+
+  <!-- jQuery Hero Slider -->
+  <script src="javascripts/hero/jquery.heroCarousel-1.3.js"></script>
+  <script>
+    $(function(){
+        if ($('.hero-carousel').length > 0)
+        {
+          $('.hero-carousel').heroCarousel({
+            easing: 'easeOutExpo',
+            css3pieFix: true
+          });
+        }
+    });
+  </script>
+
+  <!-- Main JS Plugins -->
+  <script src="javascripts/shortcodes.js"></script><!-- Shortcodes -->
+  <script src="javascripts/main.js"></script><!-- Hovers -->
+  <script src="javascripts/selectnav.min.js"></script><!-- Mobile Navigation -->
+  <script src="javascripts/jquery.fancybox.pack.js"></script><!-- Fancybox -->
+  <script src="javascripts/jquery.fancybox-media.js"></script><!-- Fancybox Media Helper -->
+  <script src="javascripts/jquery.flexslider.js"></script><!-- Flexslider -->
+  <script src="javascripts/last-tw.js"></script><!-- Twitter Feed -->
+  <script>
+    $(window).load(function(){
+       loadScript("https://api.twitter.com/1/statuses/user_timeline/envato.json?callback=twitterCallback2&amp;count=2");
+    })
+  </script>
+  <script src="javascripts/jflickrfeed.js"></script><!-- Flickr Feed -->
+  <script src="javascripts/jflickrfeed-setup.js"></script><!-- Flickr Feed Setup-->
+  <script src="javascripts/settings.js"></script> <!-- Settings for JS Plugins -->
+
   </body>
 </html>
